@@ -1,15 +1,21 @@
 import discord
 
+
+
 from discord.ext import commands
 intents = discord.Intents.default()
 intents.presences = True
 intents.message_content = True
 bot = commands.Bot(command_prefix='!', intents=intents)
 names=["compliment_me","hello","kya_karu","anshu","parthiv","pardu","ananya","ankit","shubhavi","roshan","hotel","ask"]
+
+
+
 @bot.command()
 async def list(message):
     for x in names:
      await message.send(x)
+
 
 @bot.command()
 async def compliment_me(message):
@@ -67,4 +73,4 @@ async def on_member_update(before, after):
         if channel:
             await channel.send(f'Welcome {after.mention} back online in {guild.name}!')
 
-bot.run('MTEwNzc0NzU2OTg3NjA4Njc4NA.GwkDWH.s1lluyKIbiagp6fHb8lCp_lnDyb8O1L_F5VqiM')
+bot.run('MTEwNzc0NzU2OTg3NjA4Njc4NA.GZJM4b.Ncte3TrzH0-an5ZhguJ669trqq1-ULKlqxTTJw')
